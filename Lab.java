@@ -1,3 +1,4 @@
+//Edited spacing
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -9,14 +10,14 @@ public class Lab{
         for(int i = 0; i < 100; i++){
             if (name.equals(names[i])){
                 System.out.print("Your balance is $");
-                System.out.printf("%.2f", balances[i]);
+                System.out.printf("%.2f", balances[i]);     //Now can print cents
                 System.out.println();
                 break;
             }
         }
     }
 
-    public static void newAccount(String[] names, double[] balances, int count){
+    public static void newAccount(String[] names, double[] balances, int count){  
         Scanner in = new Scanner(System.in);
         System.out.print("Please input name: ");
         String name = in.nextLine();
@@ -26,8 +27,8 @@ public class Lab{
         balances[count] = balance;
     }
 
-    public static void addMoney(String[] names, double[] balances){
-        Scanner in = new Scanner(System.in);
+    public static void addMoney(String[] names, double[] balances){     //New method for changing balance
+        Scanner in = new Scanner(System.in);       
         System.out.print("Please enter name: ");
         String name = in.nextLine();
         System.out.print("Please enter change in balance: ");
@@ -41,8 +42,8 @@ public class Lab{
     }
     public static void main(String[] args){
         boolean x = true;
-        String[] names = new String[100];
-        double[] balances = new double[100];
+        String[] names = new String[100];     
+        double[] balances = new double[100];        //Changed to double array
         System.out.println("Welcome!");
 
         while(x){
